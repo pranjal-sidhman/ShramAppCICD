@@ -4,32 +4,28 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                // Clone your GitHub repository
                 git(
                     url: 'https://github.com/pranjal-sidhman/ShramAppCICD.git',
                     branch: 'main',
-                    credentialsId: 'github-pranjal'  // GitHub token saved in Jenkins
+                    credentialsId: 'github-pranjal'
                 )
             }
         }
 
         stage('Set Permissions') {
             steps {
-                // Make the Gradle wrapper executable
                 sh 'chmod +x ./gradlew'
             }
         }
 
         stage('Build APK') {
             steps {
-                // Run the Gradle build command for debug APK
                 sh './gradlew assembleDebug'
             }
         }
 
         stage('Save APK') {
             steps {
-                // Store the generated APK in Jenkins
                 archiveArtifacts artifacts: '**/debug/*.apk', fingerprint: true
             }
         }
