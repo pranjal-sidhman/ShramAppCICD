@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/all_bg"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.employeer.job_post.PostJobActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/backicon"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:id="@+id/textst"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/job_post"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/montserrat_bold" />
+    </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:text="@string/title"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/heading_text"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/border_box"
+                android:drawableTint="@color/light_grey"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="@string/title"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:longClickable="false"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/sub_text"
+                android:textSize="@dimen/_12ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="3dp"
+                android:text="@string/job_description"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/heading_text"
+                android:textSize="@dimen/_12ssp"/>
+
+
+            <EditText
+                android:id="@+id/etDesc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/border_box"
+                android:drawableTint="@color/light_grey"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="@string/description"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine|textCapSentences"
+                android:longClickable="false"
+                android:padding="@dimen/_10sdp"
+                android:maxLines="5"
+                android:gravity="top|start"
+                android:textColor="@color/sub_text"
+                android:textSize="@dimen/_12ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginLeft="3dp"
+                    android:text="@string/state_m"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/heading_text"
+                    android:textSize="@dimen/_12ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/border_box"
+                    android:drawableTint="@color/light_grey"
+                    >
+
+                    <Spinner
+                        android:id="@+id/spinnerForState"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginLeft="3dp"
+                    android:text="@string/district_m"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/heading_text"
+                    android:textSize="@dimen/_12ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/border_box"
+                    android:drawableTint="@color/light_grey"
+                    android:padding="@dimen/_10sdp"
+                    >
+
+                    <Spinner
+                        android:id="@+id/spinnerForDistrict"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat_medium"/>
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginLeft="3dp"
+                    android:text="Gender * "
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/heading_text"
+                    android:textSize="@dimen/_12ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/border_box"
+                    android:drawableTint="@color/light_grey"
+                    android:padding="@dimen/_10sdp"
+                    >
+
+                    <Spinner
+                        android:id="@+id/spinnerForGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat_medium"/>
+
+
+                </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="3dp"
+                android:text="@string/work_loc"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/heading_text"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <EditText
+                android:id="@+id/etAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/border_box"
+                android:drawableTint="@color/light_grey"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="@string/work_loc"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:longClickable="false"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/sub_text"
+                android:textSize="@dimen/_12ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="3dp"
+                android:text="@string/job_type"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/heading_text"
+                android:textSize="@dimen/_12ssp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/border_box"
+                android:drawableTint="@color/light_grey"
+                >
+
+                <TextView
+                    android:id="@+id/tvJobType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/job_type"
+                    android:inputType="text"
+                    android:textSize="@dimen/_12ssp"
+                    />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/cGJobType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="3dp"
+                android:text="@string/company_name_m"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/heading_text"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <EditText
+                android:id="@+id/etCompanyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/border_box"
+                android:drawableTint="@color/light_grey"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="@string/company_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:longClickable="false"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/sub_text"
+                android:textSize="@dimen/_12ssp" />
+
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="@string/salary_type"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textColor="@color/heading_text"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginHorizontal="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/border_box"
+                            android:drawableTint="@color/light_grey"
+                            android:paddingVertical="@dimen/_10sdp"
+                            >
+
+                            <Spinner
+                                android:id="@+id/spinner_salary_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="@string/salary_range_m"
+                            android:textColor="@color/heading_text"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/border_box"
+                            android:drawableTint="@color/light_grey"
+                            android:paddingVertical="@dimen/_10sdp"
+                            >
+                            <Spinner
+                                android:id="@+id/spinner_salary_range"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                />
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOsalary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginLeft="3dp"
+                    android:text="@string/salary_range_m"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/heading_text"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone"/>
+
+
+                <EditText
+                    android:id="@+id/etSalary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/border_box"
+                    android:drawableTint="@color/light_grey"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/salary_range"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|text"
+                    android:longClickable="false"
+                    android:padding="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/sub_text"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginLeft="3dp"
+                    android:text="@string/main_category_m"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/heading_text"
+                    android:textSize="@dimen/_12ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/border_box"
+                    android:drawableTint="@color/light_grey"
+                    >
+
+                    <Spinner
+                        android:id="@+id/spinner_main_cat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="@dimen/_10sdp"/>
+
+
+                </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/job_category_m"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/heading_text"
+                android:textSize="@dimen/_12ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:background="@drawable/border_box"
+                android:drawableTint="@color/light_grey"
+                >
+
+                <TextView
+                    android:id="@+id/tvJobCat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/job_category"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:inputType="text"
+                    android:textSize="@dimen/_12ssp"
+                    />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/cGJobCat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="3dp"
+                android:text="@string/sub_category"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/heading_text"
+                android:textSize="@dimen/_12ssp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:background="@drawable/border_box"
+                android:drawableTint="@color/light_grey"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tvsubCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/sub_category"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:inputType="text"
+                    android:textSize="@dimen/_12ssp"
+                    />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/cGSubCat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/key_responsibility"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/heading_text"
+                    android:textSize="@dimen/_12ssp"/>
+
+
+                <EditText
+                    android:id="@+id/etKeyResp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/border_box"
+                    android:drawableTint="@color/light_grey"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/key_responsibility"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:longClickable="false"
+                    android:padding="@dimen/_10sdp"
+                    android:maxLines="3"
+                    android:gravity="top|start"
+                    android:textColor="@color/sub_text"
+                    android:textSize="@dimen/_12ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/qualification"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/heading_text"
+                    android:textSize="@dimen/_12ssp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/border_box"
+                    android:drawableTint="@color/light_grey"
+                    android:padding="@dimen/_10sdp"
+                    >
+
+                    <Spinner
+                        android:id="@+id/spinnerForEducation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat_medium"/>
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvExper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Exaperiance"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/heading_text"
+                    android:textSize="@dimen/_12ssp"/>
+                <EditText
+                    android:id="@+id/etExperiance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/border_box"
+                    android:drawableTint="@color/light_grey"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:longClickable="false"
+                    android:padding="@dimen/_10sdp"
+                    android:gravity="top|start"
+                    android:textColor="@color/sub_text"
+                    android:textSize="@dimen/_12ssp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/company_desc"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/heading_text"
+                    android:textSize="@dimen/_12ssp"/>
+
+
+                <EditText
+                    android:id="@+id/etCompDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/border_box"
+                    android:drawableTint="@color/light_grey"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/company_desc"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:longClickable="false"
+                    android:padding="@dimen/_10sdp"
+                    android:maxLines="3"
+                    android:gravity="top|start"
+                    android:textColor="@color/sub_text"
+                    android:textSize="@dimen/_12ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginLeft="3dp"
+                    android:text="@string/job_expiry_date"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/heading_text"
+                    android:textSize="@dimen/_12ssp"/>
+
+
+                <TextView
+                    android:id="@+id/tvJobExpDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/calendar"
+                    android:background="@drawable/border_box"
+                    android:drawableTint="@color/light_grey"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/job_expiry_date"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences"
+                    android:longClickable="false"
+                    android:padding="@dimen/_10sdp"
+                    android:maxLines="3"
+                    android:gravity="top|start"
+                    android:textColor="@color/sub_text"
+                    android:textSize="@dimen/_12ssp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_comp_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_UPIId">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp"
+                        android:layout_marginTop="35dp"
+                        android:background="@drawable/border_box"
+                       >
+                       <!-- android:background="@drawable/edtbg"-->
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_compImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="200sp"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginEnd="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_3sdp"
+                            android:scaleType="fitXY" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_pickimage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginEnd="@dimen/_3sdp"
+                            android:layout_marginBottom="10dp" />
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_camera"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginEnd="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_3sdp"
+                            android:src="@drawable/ic_menu_camera"
+                            android:tint="@color/colorPrimary"
+                            android:visibility="visible" />
+
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="@string/image"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/heading_text"
+                        android:textSize="@dimen/_12ssp" />
+
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submit"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:background="@drawable/bt_round_shape"
+                    android:fontFamily="@font/montserrat_bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

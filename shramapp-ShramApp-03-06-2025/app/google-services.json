@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "256448744571",
+    "project_id": "shramkart-7eda1",
+    "storage_bucket": "shramkart-7eda1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256448744571:android:549fb7e176ba3930b6a6de",
+        "android_client_info": {
+          "package_name": "com.uvk.shramapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo3nUzsFZKOrU5HBF_luUztnFLYY0x12o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

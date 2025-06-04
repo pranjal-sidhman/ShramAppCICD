@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true"
+    card_view:cardCornerRAdius="5dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="3dp"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/main_category"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/heading_text"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_14sdp"
+            android:background="@drawable/border_box"
+            android:padding="@dimen/_14sdp">
+
+
+            <Spinner
+                android:id="@+id/spinner_main_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/montserrat_medium"/>
+
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginLeft="3dp"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/job_category"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/heading_text"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:background="@drawable/border_box"
+            android:drawableTint="@color/light_grey"
+            >
+
+            <TextView
+                android:id="@+id/tvJobCat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/job_category"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textSize="@dimen/_16ssp"
+                />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cGJobCat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:layout_margin="@dimen/_4sdp"
+                app:chipSpacing="8dp"/>
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="3dp"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/sub_category"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/heading_text"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:background="@drawable/border_box"
+            android:drawableTint="@color/light_grey"
+            >
+
+            <TextView
+                android:id="@+id/tvsubCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sub_category"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textSize="@dimen/_16ssp"
+                />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cGSubCat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:layout_margin="@dimen/_4sdp"
+                app:chipSpacing="8dp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="3dp"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/skill"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/heading_text"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etSkill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_14sdp"
+            android:background="@drawable/border_box"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="@string/skill"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            android:longClickable="true"
+            android:padding="@dimen/_14sdp"
+            android:singleLine="true"
+            android:textColor="@color/sub_text"
+            android:textSize="@dimen/_16ssp" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

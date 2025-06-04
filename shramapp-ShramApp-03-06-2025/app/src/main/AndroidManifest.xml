@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.REQUEST_COMPANION_START_FOREGROUND_SERVICES_FROM_BACKGROUND" />
+    <uses-permission android:name="android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <application
+        android:name=".savedata.language.MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ShramKart"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+       <!-- <activity android:name="com.razorpay.CheckoutActivity" />
+-->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_KPfzHyYiX1f4tV" />
+
+        <!-- override so OpinionatedSoln can find your BuildConfig -->
+        <meta-data
+            android:name="BUILD_CONFIG_PACKAGE"
+            android:value="com.uvk.shramapplication" />
+        <activity
+            android:name=".ui.wallet.WalletActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.notification.NotificationListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.post.StoryDetailActivity"
+            android:exported="true">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="mahindramdrona.com"
+                    android:pathPrefix="/Shram/AppController/story_post_details"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.profile.editprofile.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.map.root_map.RootMapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.map.EmpListActivity"
+            android:exported="false" />
+        <!--
+        <activity
+            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
+            android:theme="@style/CropActivityTheme"
+            tools:replace="android:theme"/>
+        -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:theme="@style/UCropActivityTheme"
+            tools:replace="android:theme" />
+        <activity
+            android:name=".ui.login.TermConditionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.lang.LanguageSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.chat.message.MessengerListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.skillIndia.EnhanceSkillActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.joblist.available_job_list.ApplyJobSuccActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.chat.ChatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.worklist.WorkDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.map.GoogleMapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.map.EmpGoogleMapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.NewProfileActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCR_3j59lgikagDIvdXRrLYkQjt8R8bN8U" />
+
+        <activity
+            android:name=".ui.employeer.home.employeelist.EmployeeDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.employeer.home.jobPostList.details.PostedJobDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.employeer.home.jobPostList.PostedJobListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.newhome.gotjoblist.GotJobListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.employeer.worklist.list.job_request_list.JobRequestDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.employeer.home.employeelist.EmployeeListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.employeer.worklist.WorkListEmployeerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.employeer.job_post.PostJobActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".ui.joblist.available_job_list.JobsDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.joblist.available_job_list.AvailableJobListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.networkconnection.invitationlist.InvitationListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.networkconnection.myconnection.MyConnectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.jobgiver.JobGiverListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.networkconnection.NetworkDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.joblist.JobDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.joblist.JobListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.registration.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.otp.OTPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.role.RoleSelectedActivity"
+            android:exported="false" />
+        <!--
+ <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+
+            <!-- Deep link intent filter -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="mahindramdrona.com"
+                    android:pathPrefix="/Shram/AppController/story_post_details"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <!-- Launcher -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ShramKart.NoActionBar" />
+
+        <service
+            android:name=".ui.notification.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.uvk.shramapplication.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_image" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/card_round_bg_orange"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvSortHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sort by"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rgSortOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbSalaryAscending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salary (Low to High)"
+            android:buttonTint="@color/blue1"/>
+
+        <RadioButton
+            android:id="@+id/rbSalaryDescending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salary (High to Low)"
+            android:buttonTint="@color/blue1"/>
+
+        <RadioButton
+            android:id="@+id/rbLocationAscending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location (A to Z)"
+            android:buttonTint="@color/blue1"/>
+
+        <RadioButton
+            android:id="@+id/rbLocationDescending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location (Z to A)"
+            android:buttonTint="@color/blue1"/>
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold" />
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp"
+        android:padding="16dp"
+        tools:ignore="MissingConstraints">
+
+        <!-- Chip 1 with text and close icon -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip1"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category 1" />
+
+        <!-- Chip 2 with text and close icon -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category 2"
+            style="@style/Widget.MaterialComponents.Chip.Filter"/>
+
+        <!-- Chip 3 with text and close icon -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category 3"
+            android:icon="@drawable/baseline_location_on_24"
+            android:closeIcon="@drawable/ic_clear"
+            android:clickable="true"
+            android:onClick="onChipClick"/>
+    </com.google.android.material.chip.ChipGroup>
+    <Button
+        android:id="@+id/btnApplySort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:layout_marginTop="16dp" />
+
+
+</LinearLayout>
+
+<!--<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    &lt;!&ndash; Title &ndash;&gt;
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort and Filter"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    &lt;!&ndash; Sort Options &ndash;&gt;
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort by"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rgSortOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rbAlphabeticalOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alphabetical order"
+            android:layout_marginEnd="8dp" />
+
+        <RadioButton
+            android:id="@+id/rbPopulation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Population" />
+    </RadioGroup>
+
+    &lt;!&ndash; Subregion Filter &ndash;&gt;
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subregion"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold" />
+
+    <GridLayout
+        android:id="@+id/gridSubregions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:layout_marginBottom="16dp">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Northern Europe"
+            android:layout_margin="8dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Western Europe"
+            android:layout_margin="8dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Southern Europe"
+            android:layout_margin="8dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Southeast Europe"
+            android:layout_margin="8dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Central Europe"
+            android:layout_margin="8dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eastern Europe"
+            android:layout_margin="8dp" />
+    </GridLayout>
+
+    &lt;!&ndash; Action Buttons &ndash;&gt;
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btnResetAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset All"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply" />
+    </LinearLayout>
+</LinearLayout>-->

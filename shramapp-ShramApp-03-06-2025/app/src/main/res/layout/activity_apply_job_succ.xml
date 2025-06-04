@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@drawable/all_bg2"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.joblist.available_job_list.ApplyJobSuccActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_8sdp"
+            android:src="@drawable/final_check" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/job_submit_msg"
+            android:textColor="@color/heading_text"
+            android:textSize="@dimen/_15ssp"
+            android:layout_margin="@dimen/_8sdp"
+            android:padding="@dimen/_6sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_gravity="center"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/card_round_bg">
+        <LinearLayout
+            android:id="@+id/llbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/card_round_bg">
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnHome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/bt_round_shape"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/back_home"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

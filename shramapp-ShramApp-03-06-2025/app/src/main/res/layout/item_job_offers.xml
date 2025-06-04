@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_6sdp"
+    android:background="@drawable/border_box"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="start|end">
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/heading_text"
+                android:fontFamily="@font/montserrat_bold"/>
+
+
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/sub_text"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_medium"/>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:backgroundTint="@color/langgraycolor"
+                android:drawableLeft="@drawable/calendar"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/sub_text"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="@dimen/_12ssp" />
+
+
+        </LinearLayout>
+
+
+
+        <!-- Top Close Icon -->
+        <ImageView
+            android:id="@+id/btnReject"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="end|center"
+            android:src="@drawable/reject"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:tint="@color/sub_text"/>
+
+        <ImageView
+            android:id="@+id/btnAccept"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:src="@drawable/check"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

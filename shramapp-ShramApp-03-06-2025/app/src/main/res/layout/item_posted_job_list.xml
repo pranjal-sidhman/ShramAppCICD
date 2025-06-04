@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:background="@drawable/border_box"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="10dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_border"
+        android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_4sdp"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|end"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/circle_background"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/worker"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="UI/Ux Designer"
+                        android:textColor="@color/heading_text"
+                        android:textSize="@dimen/_15ssp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tvDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="Description"
+                        android:textColor="@color/sub_text"
+                        android:textSize="@dimen/_13ssp" />
+
+                  <!--  <TextView
+                        android:id="@+id/tvLoc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:backgroundTint="@color/langgraycolor"
+                        android:drawableLeft="@drawable/baseline_location_on_24"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Location"
+                        android:textColor="#757575"
+                        android:textSize="@dimen/_13ssp" />-->
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:src="@drawable/baseline_location_on_24"
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:padding="@dimen/_3sdp"
+                            app:tint="@color/black"/>
+
+
+                        <TextView
+                            android:id="@+id/tvLoc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/sub_text"
+                            android:textSize="@dimen/_13ssp"
+                            android:layout_gravity="center_vertical"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </LinearLayout>
+
+
+                <!-- Top Close Icon -->
+                <ImageView
+                    android:id="@+id/btnData"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/dots"
+                    app:tint="@color/heading_text" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/edittext_bg"
+            android:fontFamily="@font/montserrat_medium"
+            android:padding="@dimen/_5sdp"
+            android:text=" 11,316 - 50,000 a month "
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp" />
+
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupJobTypes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            app:chipSpacingHorizontal="4dp" />
+
+        <!-- ChipGroup for Categories -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            app:chipSpacingHorizontal="4dp" />
+
+        <!-- ChipGroup for SubCategories -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupSubCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            app:chipSpacingHorizontal="4dp" />
+
+        <TextView
+            android:id="@+id/tvApplyStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@drawable/edtbg"
+            android:fontFamily="@font/montserrat_bold"
+            android:padding="@dimen/_5sdp"
+            android:textColor="#FF4CAF50"
+            android:textSize="@dimen/_13ssp"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@drawable/calendar"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_3sdp"
+                app:tint="@color/black"/>
+
+            <TextView
+                android:id="@+id/tvPostDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/sub_text"
+                android:textSize="@dimen/_13ssp"
+                android:layout_gravity="center_vertical"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>

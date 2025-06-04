@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ShramKart" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+</resources>
+
+
+<!--
+
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    &lt;!&ndash; Base application theme. &ndash;&gt;
+    <style name="Theme.ShramApplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        &lt;!&ndash; Primary brand color. &ndash;&gt;
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        &lt;!&ndash; Secondary brand color. &ndash;&gt;
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/white</item>
+        &lt;!&ndash; Status bar color. &ndash;&gt;
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+    </style>
+
+    <style name="Theme.ShramApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.ShramApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    &lt;!&ndash; Define custom TextAppearance for navigation menu &ndash;&gt;
+    <style name="NavigationMenuTextAppearance" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/montserrat_bold</item> &lt;!&ndash; Replace with your custom font &ndash;&gt;
+        <item name="android:textSize">@dimen/_16ssp</item> &lt;!&ndash; Set your desired text size &ndash;&gt;
+        <item name="android:textColor">@android:color/white</item> &lt;!&ndash; Set text color &ndash;&gt;
+    </style>
+
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+
+    </style>
+</resources>-->

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <CheckBox
+        android:id="@+id/cbCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <EditText
+        android:id="@+id/etVacancy"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/no_vacancy"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:cursorVisible="true" />
+
+
+
+</LinearLayout>
+
+
+
+    <!--
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <CheckBox
+            android:id="@+id/cbCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Category" />
+
+        <EditText
+            android:id="@+id/etVacancy"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="No.vacancy"
+            android:maxLines="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:clickable="true"
+            android:cursorVisible="true"
+            android:imeOptions="actionDone"
+            android:textSize="16sp" />
+    </LinearLayout>
+    -->

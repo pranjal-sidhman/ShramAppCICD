@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.profile.myFollowers.MyFollowersFragment">
+
+  <androidx.appcompat.widget.LinearLayoutCompat
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:background="@drawable/all_bg"
+      android:layout_margin="@dimen/_5sdp">
+
+
+      <androidx.appcompat.widget.LinearLayoutCompat
+          android:id="@+id/llInvitation"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_margin="@dimen/_5sdp"
+          android:layout_alignParentBottom="true">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Followers"
+              android:textSize="@dimen/_14ssp"
+              android:layout_margin="@dimen/_8sdp"
+              android:textColor="@color/colorPrimary"
+              android:fontFamily="@font/montserrat_bold"/>
+
+          <TextView
+              android:id="@+id/tvConnCount"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="@dimen/_14ssp"
+              android:text="0"
+              android:layout_margin="@dimen/_8sdp"
+              android:textColor="@color/heading_text"
+              android:fontFamily="@font/montserrat_bold"/>
+      </androidx.appcompat.widget.LinearLayoutCompat>
+
+      <ImageView
+          android:id="@+id/nodataimg"
+          android:layout_width="300dp"
+          android:layout_height="300dp"
+          android:layout_gravity="center"
+          android:layout_marginTop="10dp"
+          android:visibility="gone"
+          android:src="@drawable/no_data_found" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginTop="@dimen/_10sdp"
+          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+  </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>

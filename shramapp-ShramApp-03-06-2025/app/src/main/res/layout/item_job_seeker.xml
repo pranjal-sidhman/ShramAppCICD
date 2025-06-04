@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardCornerRadius="10dp"
+    android:backgroundTint="@color/white"
+    android:background="@drawable/border_box">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_4sdp"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/_5sdp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="start|end">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/worker"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/circle_background"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UI/Ux Designer"
+                        android:textSize="@dimen/_15ssp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/heading_text"/>
+
+
+
+                    <TextView
+                        android:id="@+id/tvDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/sub_text"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat_medium"/>
+
+                    <TextView
+                        android:id="@+id/tvLoc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Location"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="#757575"
+                        android:drawableLeft="@drawable/baseline_location_on_24"
+                        android:backgroundTint="@color/langgraycolor"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        />
+
+
+
+
+
+                </LinearLayout>
+
+
+
+                <!-- Top Close Icon -->
+                <ImageView
+                    android:id="@+id/btnClose"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/save"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 11,316 - 50,000 a month "
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_margin="@dimen/_8sdp"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/black"
+            android:background="@drawable/edittext_bg"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginTop="@dimen/_8sdp"
+            />
+
+        <!--<androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/tvvaca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Full-Time "
+                android:layout_margin="@dimen/_8sdp"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/black"
+                android:backgroundTint="#FFD3D1D1"
+                android:background="@drawable/edittext_bg"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginTop="@dimen/_8sdp"
+                />
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" On-site "
+                android:layout_margin="@dimen/_8sdp"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/black"
+                android:background="@drawable/edittext_bg"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginTop="@dimen/_8sdp"
+                />
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_8sdp">
+
+            <!-- Job Types Chips -->
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupJobTypes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipSpacing="2dp"
+                android:orientation="horizontal"
+                app:singleSelection="false">
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipSpacing="2dp"
+                android:orientation="horizontal"
+                app:singleSelection="false"
+                tools:ignore="DuplicateIds">
+            </com.google.android.material.chip.ChipGroup>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Easily apply"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="#757575"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:drawableLeft="@drawable/baseline_arrow_forward_24"
+            android:backgroundTint="@color/langgraycolor"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginTop="@dimen/_8sdp"
+            />
+
+
+
+
+        <!--  <androidx.appcompat.widget.LinearLayoutCompat
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <TextView
+                  android:id="@+id/tvChat"
+                  android:layout_width="@dimen/_80sdp"
+                  android:layout_height="wrap_content"
+                  android:text="Chat"
+                  android:drawableLeft="@drawable/chat"
+                  android:layout_margin="@dimen/_8sdp"
+                  android:padding="@dimen/_5sdp"
+                  android:textSize="@dimen/_13ssp"
+                  android:textColor="@color/black"
+                  android:background="@drawable/btn_shape_round"
+                  android:fontFamily="@font/montserrat_medium"
+                  android:layout_marginTop="@dimen/_8sdp"
+                  android:gravity="center"
+                  />
+              <TextView
+                  android:id="@+id/tvCall"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Call HR"
+                  android:drawableLeft="@drawable/baseline_call_24"
+                  android:layout_margin="@dimen/_8sdp"
+                  android:padding="@dimen/_5sdp"
+                  android:textSize="@dimen/_13ssp"
+                  android:textColor="@color/black"
+                  android:background="@drawable/btn_shape_round"
+                  android:fontFamily="@font/montserrat_medium"
+                  android:layout_marginTop="@dimen/_8sdp"
+                  android:gravity="center"
+                  />
+
+              <ImageView
+                  android:layout_width="@dimen/_30sdp"
+                  android:layout_height="@dimen/_30sdp"
+                  android:layout_margin="@dimen/_8sdp"
+                  android:padding="@dimen/_5sdp"
+                  android:background="@drawable/btn_shape_round"
+                  android:src="@drawable/baseline_arrow_forward_24"
+                  android:gravity="center"/>
+
+          </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/langgraycolor"
+            android:layout_marginVertical="8dp" />-->
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>

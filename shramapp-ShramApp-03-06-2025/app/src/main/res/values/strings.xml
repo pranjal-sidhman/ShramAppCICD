@@ -1,0 +1,236 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">ShramKart</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- In res/values/strings.xml -->
+    <string name="google_api_keys">AIzaSyDm5rk6b2R-dcYBA3epHl6gzAl0HDKQTSc</string>
+
+    <string name="refresh">Refresh</string>
+    <string name="menu_home">Home</string>
+    <string name="change_lang">Change Language</string>
+    <string name="view">View</string>
+    <string name="easy_apply">Apply</string>
+    <string name="no_vacancy">No. Vacancy</string>
+
+    <string name="txxtselect_app_language">Select App Language</string>
+    <string name="select_card">Please select a card!</string>
+
+    <string name="upload_aadhar">Upload Your Aadhar Card.</string>
+    <string name="enter_title">Please Enter Job Title.</string>
+    <string name="enter_desc">Please Enter Job Description.</string>
+    <string name="enter_add">Please Enter Valid Work Location.</string>
+    <string name="select_job_type">Please Select Job Type</string>
+    <string name="enter_comp_name">Please Enter Company Name</string>
+    <string name="enter_designation">Please Enter Designation</string>
+    <string name="enter_name">Please Enter Your Name</string>
+    <string name="enter_valid_name">Please Enter Valid Name.</string>
+    <string name="enter_mobile">Please Enter Mobile No.</string>
+    <string name="enter_valid_mobile">Please Enter Valid Mobile No.</string>
+    <string name="enter_key_resp">Please Enter Key Responsibility</string>
+    <string name="enter_qualification">Please Enter Qualification</string>
+    <string name="enter_comp_desc">Please Enter Company Description</string>
+    <string name="enter_skill">Please Enter Skill</string>
+    <string name="enter_pincode">Please Enter Pincode</string>
+    <string name="enter_experience">Ex. 2 years experience </string>
+    <string name="enter_role">Please Enter Your Role *</string>
+    <string name="select_role">Please Select Your Role *</string>
+    <string name="select_aadhar_img">Please Select Your Aadhar Card</string>
+    <string name="select_prof_img">Select Profile Image</string>
+    <string name="select_salary_type">Please Select Salary Type.</string>
+    <string name="select_salary_range">Please Select Salary Range.</string>
+    <string name="select_salary_amount">Please enter salary amount.</string>
+    <string name="select_main_cat">Please Select Main Category.</string>
+    <string name="select_cat">Please Select Category</string>
+
+    <string name="select_sub_cat">Please Select Sub Category</string>
+    <string name="select_state">Please Select State.</string>
+    <string name="select_dist">Please Select District.</string>
+    <string name="select_job_expire_date">Please Select Job Expiry Date</string>
+    <string name="intrested">Are you intrested?</string>
+
+
+    <string name="edit_profile">Edit Profile</string>
+    <string name="profile">Profile</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="choose_title">Choose Job Type</string>
+    <string name="choose_title1">Are you looking for a new job or looking for new employee?</string>
+    <string name="choose_title2">Seek Employment</string>
+    <string name="choose_title3">Hire Employee</string>
+    <string name="job_option">Its easy to find your dream jobs here with us</string>
+    <string name="job_option2">Its easy to find your employees here with us</string>
+    <string name="gov_skill">Enhance skill In Free</string>
+    <string name="skill">Skill</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="save">Save</string>
+    <string name="apply">Apply</string>
+    <string name="job_details">Job Details</string>
+    <string name="login_msg">Please Login.</string>
+    <string name="call_msg">Are you sure you want to call?</string>
+    <string name="exit_msg">Are you sure you want to exit in app?</string>
+    <string name="reject_offer_msg">Are you sure you want to reject this job offer?</string>
+    <string name="reject_offer_title">Reject Job Offer</string>
+    <string name="remove_conn_title">Remove Connection?</string>
+    <string name="my_connection">My Connections</string>
+    <string name="connection">Connections</string>
+    <string name="invitation">Invitation</string>
+    <string name="background_permission">Background permission</string>
+    <string name="remove_conn_message">Are you sure you want to remove the connection with %1$s?</string>
+    <string name="location_permission">Shram utilizes location data to provide essential tracking services, ensuring your  security even when the app is closed or not in use.
+</string>
+
+    <string name="reject">Reject</string>
+    <string name="accept">Accept</string>
+    <string name="deny">Deny</string>
+    <string name="cancel">Cancel</string>
+    <string name="remove">Remove</string>
+    <string name="call">Call</string>
+    <string name="chat">Chat</string>
+    <string name="company">Company</string>
+    <string name="job_description">Job Description *</string>
+    <string name="description">Job Description</string>
+    <string name="available_job">Available Job</string>
+    <string name="post">Post</string>
+    <string name="network">Network</string>
+    <string name="network_details">Network Details</string>
+    <string name="logout">Logout</string>
+
+
+    <string name="work_list">Work List</string>
+    <string name="about_job">About Job</string>
+    <string name="about_comp">About %1$s</string>
+    <string name="read_more">Read more...</string>
+    <string name="key_responsibility">Key Responsibility</string>
+    <string name="qualification">Qualification</string>
+    <string name="emp_list">Employee List</string>
+    <string name="emp_details">Employee Details</string>
+    <string name="job_list">Job List</string>
+    <string name="send_request">Send Request</string>
+
+    <string name="available_msg_emp">Are you able to work today?</string>
+    <string name="available_msg_employeer">Are you selecting employees today?</string>
+    <string name="designation">Designation</string>
+    <string name="designation_enter">Type Your Designation *</string>
+    <string name="company_name_m">Company / Individual Name *</string>
+    <string name="company_name">Company / Individual Name</string>
+    <string name="company_desc">Company Description</string>
+    <string name="job_seeker">Job Seeker</string>
+    <string name="got_jobs">Got Jobs</string>
+    <string name="available_jobs">Available Jobs</string>
+    <string name="job_post">Job Post</string>
+    <string name="enhance_skill">Enhance Skill</string>
+    <string name="available_emp">Available Employee</string>
+    <string name="job_giver">Job Giver</string>
+    <string name="next">Next</string>
+    <string name="title">Job Title *</string>
+    <string name="job_type_m">Job Type *</string>
+    <string name="job_type">Job Type</string>
+    <string name="salary_range_m">Salary Range *</string>
+    <string name="salary_range">Salary Range</string>
+    <string name="main_category_m">Main Category *</string>
+    <string name="main_category">Main Category</string>
+    <string name="job_category_m">Category *</string>
+    <string name="job_category">Category</string>
+    <string name="sub_category">Sub Category</string>
+    <string name="image">Image</string>
+    <string name="salary_type">Salary Type *</string>
+    <string name="job_expiry_date">Job Expiry Date *</string>
+    <string name="filter">Filter</string>
+    <string name="reset">Reset</string>
+    <string name="sector_name">Sector Name</string>
+    <string name="write_comment">Write a comment...</string>
+    <string name="comments">Comments</string>
+    <string name="message">Message</string>
+
+
+    <string name="submit">Submit</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="aadhar_img">Aadhar Image</string>
+    <string name="r_u_got_job">Are you got job?</string>
+    <string name="select_got_job">Please select your got jobs?</string>
+    <string name="back_home">Back To Home</string>
+    <string name="job_submit_msg">Congratulations!! Your applications has been submitted.</string>
+    <string name="cancele_request_msg">Are you sure you want to cancel this request?</string>
+    <string name="delete_job_post_msg">Are you sure you want to delete this job post?</string>
+    <string name="delete_post">Delete Post</string>
+    <string name="delete_comment_msg">Are you sure you want to delete this comment?</string>
+    <string name="delete_post_msg">Are you sure you want to delete this post?</string>
+    <string name="see_all">See all</string>
+    <string name="login">Login</string>
+    <string name="wc_login">Welcome Back</string>
+    <string name="wc_login_sub">Please log in to your account</string>
+    <string name="phone_number">Mobile Number</string>
+    <string name="phone_number_m">Mobile Number *</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="keep_me_signed">Keep me signed in.</string>
+    <string name="term_cond">I agree to T&amp;C and Privacy Policy.</string>
+    <string name="verify">Verify</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="timer_msg1">The otp will expired in </string>
+    <string name="timer_msg2">second. </string>
+    <string name="otp_verfication">OTP Verification</string>
+    <string name="otp_verfication1">Enter 4-digit verification code we just sent to your </string>
+    <string name="otp_verfication2">mobile number.</string>
+    <string name="connect">Connect</string>
+    <string name="reg_acc">Register your account</string>
+    <string name="create_acc">Create an account</string>
+    <string name="full_name">Full Name</string>
+    <string name="full_name_m">Full Name *</string>
+    <string name="mobile">Mobile No.</string>
+    <string name="email">Email Id</string>
+    <string name="address">Address</string>
+    <string name="address_m">Address *</string>
+    <string name="work_loc">Work Location *</string>
+    <string name="state_m">State *</string>
+    <string name="state">State</string>
+    <string name="district_m">District *</string>
+    <string name="district">District</string>
+    <string name="taluka">Taluka</string>
+    <string name="pincode">Pincode</string>
+    <string name="up_aadhar">Upload aadhar card photo</string>
+    <string name="browse_photo">Browse a photo</string>
+    <string name="browse_doc">Browse a document</string>
+    <string name="wc_text">Welcome Everyone</string>
+    <string name="type_a_message">Type a message...</string>
+
+
+    <string name="textw">
+    Hi, Im Jane Doe, a mobile app developer based in San Francisco.
+    I have a deep passion for creating intuitive and functional Android applications.
+    My primary skills include Kotlin, Java, and UI/UX design,
+    with a focus on building seamless user experiences.
+    When Im not coding, youll find me hiking in the mountains, capturing landscapes through my lens,
+    or reading the latest tech blogs.</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_onboarding_1">Welcome to SHRAM App !</string>
+    <string name="description_onboarding_1">Connect with people around the world.User will be
+        able to give you live, chat and meet
+        with people nearby.</string>
+
+    <string name="title_onboarding_2">Let\'s build connection with new people</string>
+    <string name="description_onboarding_2">Connect helps you locate the people around you who
+        are closest from your home.</string>
+
+    <string name="title_onboarding_3">Feel the happiness</string>
+    <string name="description_onboarding_3">User will be able to give you live, chat and meet
+        with people nearby.</string>
+
+    <string name="start_text_advice">By continuing on this application you agree to our Terms of
+        Use and Privacy Policy</string>
+
+    <string name="start">start</string>
+    <string name="skip">Skip</string>
+    <string name="finish">finish</string>
+    <string name="back">back</string>
+    <string name="recently_added">Recently added</string>
+</resources>

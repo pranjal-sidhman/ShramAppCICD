@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="16dp"
+    android:padding="8dp">-->
+
+<com.google.android.material.chip.Chip
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/skillChip"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/_40sdp"
+    android:textColor="@color/heading_text"
+    android:background="@drawable/border_box"
+    android:layout_margin="8dp"
+    android:padding="@dimen/_8sdp"
+    android:textSize="@dimen/_12ssp" /> <!-- Default backgroundTint -->
+
+
+        <!--app:chipIcon="@drawable/ic_chip_icon" />-->
+<!--</androidx.cardview.widget.CardView>-->
+
+

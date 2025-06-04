@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="25dp"/>
+   <!-- <solid android:color="@color/light_blue"/>-->
+    <solid android:color="#FFFFFFFF"/>
+</shape>
+<!--
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="25dp"/>
+    <solid android:color="#FFFFFFFF"/> &lt;!&ndash; White background &ndash;&gt;
+    <stroke android:width="2dp" android:color="#808080"/> &lt;!&ndash; Gray border &ndash;&gt;
+</shape>
+-->
+

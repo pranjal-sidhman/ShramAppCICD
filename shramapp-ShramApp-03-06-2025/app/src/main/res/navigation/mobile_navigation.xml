@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home"> <!-- Corrected the startDestination reference -->
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.uvk.shramapplication.ui.home.newhome.NewHomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_new_home" />
+
+    <!-- Employer Home Fragment -->
+    <fragment
+        android:id="@+id/nav_employeer_home"
+        android:name="com.uvk.shramapplication.ui.employeer.home.EmployeerHomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_employeer_home" />
+
+    <!-- Post Fragment -->
+    <fragment
+        android:id="@+id/nav_post"
+        android:name="com.uvk.shramapplication.ui.post.PostFragment"
+        android:label="@string/post"
+        tools:layout="@layout/fragment_post" />
+
+    <!-- Network Fragment -->
+    <fragment
+        android:id="@+id/nav_network"
+        android:name="com.uvk.shramapplication.ui.networkconnection.NetworkFragment"
+        android:label="@string/network"
+        tools:layout="@layout/fragment_network" />
+
+    <!-- Work List Fragment -->
+    <!--<fragment
+        android:id="@+id/nav_worklist"
+        android:name="com.uvk.shramapplication.ui.worklist.WorkListFragment"
+        android:label="@string/work_list"
+        tools:layout="@layout/fragment_work_list" />-->
+    <fragment
+        android:id="@+id/nav_worklist"
+        android:name="com.uvk.shramapplication.ui.worklist.WorkListFragment"
+        android:label="@string/work_list">
+        <argument
+            android:name="tab_index"
+            app:argType="integer"
+            android:defaultValue="0"/>
+    </fragment>
+
+
+
+    <!--<fragment
+        android:id="@+id/myPost"
+        android:name="com.example.shramapplication.ui.employeer.profile.myPost.MyPostFragment"
+        tools:layout="fragment_my_post"/>-->
+
+    <!-- Example of Navigation Action -->
+   <!-- <action
+        android:id="@+id/action_home_to_post"
+        app:destination="@id/nav_post" />-->
+
+</navigation>
+

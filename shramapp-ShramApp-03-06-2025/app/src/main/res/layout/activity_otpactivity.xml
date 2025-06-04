@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/all_bg"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.otp.OTPActivity">
+
+    <!--<ImageView
+        android:id="@+id/backicon"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/baseline_arrow_back_32"
+        app:layout_marginStart="16dp"
+        app:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16ssp"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/otp_verfication"
+        android:textColor="@color/heading_text"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backicon" />
+
+    <TextView
+        android:id="@+id/tvVerificationMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16ssp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/montserrat_medium"
+        android:padding="@dimen/_3sdp"
+        android:textColor="@color/sub_text"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvVerificationMessage" />
+
+    <com.mukeshsolanki.OtpView
+        android:id="@+id/otp_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:inputType="number"
+        android:itemBackground="@drawable/bg_otp_item"
+        android:padding="@dimen/_8sdp"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_14sdp"
+        app:OtpHideLineWhenFilled="true"
+        app:OtpItemCount="4"
+        app:OtpItemSpacing="15dp"
+        app:OtpLineColor="@color/colorPrimary"
+        app:OtpState_filled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvVerificationMessage" />
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/sub_text"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otp_view" />
+-->
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/backicon"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/arrow_back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16ssp"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/otp_verfication"
+        android:textColor="@color/heading_text"
+        android:textSize="@dimen/_20ssp" />
+
+    <TextView
+        android:id="@+id/tvVerificationMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16ssp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/montserrat_medium"
+        android:padding="@dimen/_3sdp"
+        android:textColor="@color/sub_text"
+        android:textSize="@dimen/_16ssp" />
+
+
+    <com.mukeshsolanki.OtpView
+        android:id="@+id/otp_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:inputType="number"
+        android:itemBackground="@drawable/bg_otp_item"
+        android:padding="@dimen/_8sdp"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_14sdp"
+        android:fontFamily="@font/montserrat_bold"
+        app:OtpHideLineWhenFilled="true"
+        app:OtpItemCount="4"
+        app:OtpItemSpacing="15dp"
+        app:OtpLineColor="@color/colorPrimary"
+        app:OtpState_filled="true" />
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/sub_text"
+        android:textSize="@dimen/_14ssp" />
+
+        <LinearLayout
+            android:id="@+id/lyResend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:padding="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDnOTP"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvResend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:textSize="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <Button
+        android:id="@+id/btnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bt_round_shape"
+        android:text="@string/verify"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/all_bg"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.otp.OTPActivity">
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/backicon"
+                    android:layout_width="?actionBarSize"
+                    android:layout_height="?actionBarSize"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/baseline_arrow_back_32" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16ssp"
+                    android:layout_marginTop="@dimen/_70sdp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/otp_verfication"
+                    android:textColor="@color/heading_text"
+                    android:textSize="@dimen/_20ssp" />
+
+                <TextView
+                    android:id="@+id/tvVerificationMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_16ssp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:padding="@dimen/_3sdp"
+                    android:textColor="@color/sub_text"
+                    android:textSize="@dimen/_16ssp" />
+
+
+                <com.mukeshsolanki.OtpView
+                    android:id="@+id/otp_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:inputType="number"
+                    android:itemBackground="@drawable/bg_otp_item"
+                    android:padding="@dimen/_8sdp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_14sdp"
+                    app:OtpHideLineWhenFilled="true"
+                    app:OtpItemCount="4"
+                    app:OtpItemSpacing="15dp"
+                    app:OtpLineColor="@color/colorPrimary"
+                    app:OtpState_filled="true" />
+
+                <TextView
+                    android:id="@+id/tvTimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/sub_text"
+                    android:textSize="@dimen/_12ssp" />
+
+                <Button
+                    android:id="@+id/btnVerify"
+                    style="@style/Widget.Material3.Button.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|bottom"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text=" Verify OTP "
+                    android:textSize="@dimen/_14ssp" />
+
+
+                &lt;!&ndash;  android:itemBackground="@drawable/bg_otp_item"&ndash;&gt;
+
+
+                &lt;!&ndash; <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/lyResend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="horizontal"
+                        android:layout_alignParentBottom="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8ssp"
+                            android:text="Don’t receive OTP?"
+                            android:textSize="@dimen/_14sdp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textAlignment="center"
+                            android:textColor="#595757"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvResend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8ssp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Resend again"
+                            android:textSize="@dimen/_14sdp"
+                            android:textAlignment="center"
+                            android:textColor="@color/blue1"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>&ndash;&gt;
+
+                &lt;!&ndash;<RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/lyResend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center|bottom"
+                        android:orientation="horizontal"
+                        android:layout_margin="@dimen/_20sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Don’t receive OTP?"
+                            android:textColor="@color/sub_text"
+                            android:textSize="@dimen/_14ssp"
+                            android:fontFamily="@font/montserrat_medium"/>
+
+                        <TextView
+                            android:id="@+id/tvResend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Resend again"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_14ssp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </RelativeLayout>&ndash;&gt;
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>-->

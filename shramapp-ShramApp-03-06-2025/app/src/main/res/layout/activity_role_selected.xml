@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/all_bg">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_13ssp"
+        android:contentDescription="Back"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Title or Message -->
+ <!--   <TextView
+        android:id="@+id/tvVerificationMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Your Option"
+        android:textSize="18sp"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />-->
+
+    <LinearLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_title"
+            android:textColor="@color/heading_text"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat_bold"/>
+
+        <TextView
+            android:id="@+id/tvVerificationMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_title1"
+            android:textColor="@color/sub_text"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/montserrat_medium"/>
+    </LinearLayout>
+    <!-- Card Container -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@id/titleLayout"
+        app:layout_constraintBottom_toTopOf="@id/btnNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp">
+
+        <!-- First Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/jobCard"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp">
+                <FrameLayout
+                    android:id="@+id/ivFindJob"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/icgraycircle"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:focusable="true">
+
+
+                    <ImageView
+                        android:id="@+id/ivFindIcon"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:src="@drawable/work_icon"
+                        app:tint="@color/sub_text"
+                        android:layout_gravity="center"/>
+                </FrameLayout>
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job Seeker"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />-->
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/choose_title2"
+                        android:textSize="16sp"
+                        android:textColor="@color/heading_text"
+                        android:gravity="center"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/job_option"
+                    android:textSize="14sp"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:textColor="@color/sub_text"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Second Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/hireCard"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp">
+
+                <FrameLayout
+                    android:id="@+id/ivHire"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/icgraycircle"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:focusable="true">
+
+
+                    <ImageView
+                        android:id="@+id/ivHireIcon"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:src="@drawable/network"
+                        app:tint="@color/sub_text"
+                        android:layout_gravity="center"/>
+                </FrameLayout>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/choose_title3"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:textSize="16sp"
+                        android:textColor="@color/heading_text"
+                        android:gravity="center"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/job_option2"
+                    android:textSize="14sp"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:textColor="@color/sub_text"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:layout_margin="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/all_bg"
+    tools:context=".ui.role.RoleSelectedActivity">
+
+    &lt;!&ndash; Back Button &ndash;&gt;
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Back"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    &lt;!&ndash; Title and Subtitle &ndash;&gt;
+    <LinearLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_title"
+            android:textColor="@color/heading_text"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat_bold"/>
+
+        <TextView
+            android:id="@+id/tvVerificationMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_title1"
+            android:textColor="@color/sub_text"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/montserrat_medium"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@id/titleLayout"
+        app:layout_constraintBottom_toTopOf="@id/btnNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/_10sdp">
+
+        &lt;!&ndash; First Card &ndash;&gt;
+        <androidx.cardview.widget.CardView
+            android:id="@+id/jobCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_margin="@dimen/_8sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="@dimen/_12sdp">
+
+                &lt;!&ndash; Card Content Here &ndash;&gt;
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        &lt;!&ndash; Second Card &ndash;&gt;
+        <androidx.cardview.widget.CardView
+            android:id="@+id/hireCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_margin="@dimen/_8sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="@dimen/_12sdp">
+
+                &lt;!&ndash; Card Content Here &ndash;&gt;
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    &lt;!&ndash; Next Button &ndash;&gt;
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:textSize="14sp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bt_round_shape"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--
+
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/all_bg"
+        tools:context=".ui.role.RoleSelectedActivity">
+
+        &lt;!&ndash; Back Button &ndash;&gt;
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_13ssp"
+            android:contentDescription="Back"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_8ssp"
+            app:layout_constraintTop_toBottomOf="@id/backButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15ssp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/choose_title"
+                android:textColor="@color/heading_text"
+                android:textSize="@dimen/_18ssp" />
+            <TextView
+                android:id="@+id/tvVerificationMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_title1"
+                android:layout_marginHorizontal="@dimen/_16ssp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:padding="@dimen/_3sdp"
+                android:textColor="@color/sub_text"
+                android:textSize="@dimen/_12ssp" />
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@id/backButton"
+            app:layout_constraintBottom_toTopOf="@id/btnNext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            &lt;!&ndash; First Card &ndash;&gt;
+            <androidx.cardview.widget.CardView
+                android:id="@+id/jobCard"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_20sdp"
+                android:elevation="@dimen/_5sdp"
+                app:cardElevation="@dimen/_5sdp"
+                android:layout_margin="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+
+
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        &lt;!&ndash; Circular Background with Shadow &ndash;&gt;
+                        <FrameLayout
+                            android:id="@+id/ivFindJob"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:background="@drawable/icgraycircle"
+                            android:layout_centerInParent="true"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            &lt;!&ndash; User Icon &ndash;&gt;
+                            <ImageView
+                                android:id="@+id/ivFindIcon"
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/work_icon"
+                                app:tint="@color/sub_text"
+                                android:layout_gravity="center"/>
+                        </FrameLayout>
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_4sdp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/choose_title2"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/heading_text"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/job_option"
+                        android:textSize="@dimen/_11ssp"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:textColor="@color/sub_text"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            &lt;!&ndash; Second Card &ndash;&gt;
+            <androidx.cardview.widget.CardView
+                android:id="@+id/hireCard"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_20sdp"
+                android:elevation="@dimen/_5sdp"
+                app:cardElevation="@dimen/_5sdp"
+                android:layout_margin="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="12dp">
+
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        &lt;!&ndash; Circular Background with Shadow &ndash;&gt;
+                        <FrameLayout
+                            android:id="@+id/ivHire"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:background="@drawable/icgraycircle"
+                            android:layout_centerInParent="true"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            &lt;!&ndash; User Icon &ndash;&gt;
+                            <ImageView
+                                android:id="@+id/ivHireIcon"
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/network"
+                                app:tint="@color/sub_text"
+                                android:layout_gravity="center"/>
+                        </FrameLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_4sdp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/choose_title3"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/heading_text"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/job_option2"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/sub_text"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        &lt;!&ndash; Next Button &ndash;&gt;
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|bottom"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bt_round_shape"
+            android:text="@string/next"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    -->

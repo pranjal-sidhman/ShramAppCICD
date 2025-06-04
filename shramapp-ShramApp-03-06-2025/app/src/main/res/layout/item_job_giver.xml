@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="@dimen/_5sdp"
+    android:background="@color/white"
+    app:cardElevation="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <!-- Profile Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="start|end"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/worker" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDesignation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:hint="Electrician"
+                    android:textColor="@color/heading_text"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                   android:fontFamily="@font/montserrat_medium"
+                    android:hint="Ram Patil"
+                    android:textColor="@color/heading_text"
+                    android:textSize="@dimen/_13ssp" />
+                <TextView
+                    android:id="@+id/tvLoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:backgroundTint="@color/sub_text"
+                    android:drawableLeft="@drawable/baseline_location_on_24"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Location"
+                    android:textColor="@color/sub_text"
+                    android:textSize="@dimen/_13ssp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/tvvaca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:background="@drawable/edittext_bg"
+                android:fontFamily="@font/montserrat_medium"
+                android:padding="@dimen/_5sdp"
+                android:text=" Full-Time "
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skill"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            tools:ignore="MissingConstraints">
+
+            <!-- Chip 1 with text and close icon -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip1"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="java" />
+
+            <!-- Chip 2 with text and close icon -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kotlin"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+
+            <!-- Chip 3 with text and close icon -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="flutter"
+                android:icon="@drawable/baseline_location_on_24"
+                android:closeIcon="@drawable/ic_clear"
+                android:clickable="true"
+                android:onClick="onChipClick"/>
+        </com.google.android.material.chip.ChipGroup>
+
+
+
+
+        <TextView
+            android:id="@+id/tvSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 11,316 - 50,000 a month "
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_margin="@dimen/_8sdp"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/black"
+            android:background="@drawable/edittext_bg"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginTop="@dimen/_8sdp"
+            />
+
+
+       <!-- <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:scaleType="fitXY"
+            android:src="@drawable/baby2" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Location"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Description"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+-->
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+<!--
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:adjustViewBounds="true"
+    app:cardCornerRadius="10dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/baby2" />
+
+</androidx.cardview.widget.CardView>-->

@@ -1,0 +1,33 @@
+package com.uvk.shramapplication.response
+
+data class DATA(
+    val ADDRESS: String,
+    val CITY_ID: Int,
+    val CITY_ID_10: Int,
+    val CITY_ID_2: Int,
+    val CITY_ID_3: Int,
+    val CITY_ID_4: Int,
+    val CITY_ID_5: Int,
+    val CITY_ID_6: Int,
+    val CITY_ID_7: Int,
+    val CITY_ID_8: Int,
+    val CITY_ID_9: Int,
+    val CITY_NAME: String,
+    val CITY_NAME_10: String,
+    val CITY_NAME_2: String,
+    val CITY_NAME_3: String,
+    val CITY_NAME_4: String,
+    val CITY_NAME_5: String,
+    val CITY_NAME_6: String,
+    val CITY_NAME_7: String,
+    val CITY_NAME_8: String,
+    val CITY_NAME_9: String,
+    val CITY_VILLAGE_NAME: String,
+    val EMAIL: String,
+    val MOBILE_NO: String,
+    val SERVICE_ENGINEER_NAME: String,
+    val STATE_ID: Int,
+    val STATE_NAME: String,
+    val TALUKA_ID: String,
+    val TALUKA_NAME: String
+)

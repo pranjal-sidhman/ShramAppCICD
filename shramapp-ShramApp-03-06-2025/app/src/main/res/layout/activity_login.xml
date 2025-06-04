@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/all_bg" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/backicon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="127dp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/logo" />
+        <!-- Top section for title and subtitle -->
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_20ssp"
+            android:gravity="top"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="top">-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/wc_login"
+            android:textColor="@color/heading_text"
+            android:textSize="@dimen/_20ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/wc_login_sub"
+            android:textColor="#8c8c8c"
+            android:textSize="@dimen/_15ssp" />
+        <!--  </LinearLayout>-->
+
+        <!-- Space to push other content to the center -->
+        <!--<Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />-->
+
+        <!-- Centered container for form and buttons -->
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:padding="@dimen/_8sdp"
+             android:layout_marginStart="@dimen/_14sdp">
+ -->
+        <!-- Phone Number Input -->
+        <!-- <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_margin="@dimen/_10sdp"
+             android:fontFamily="@font/montserrat_bold"
+             android:text="@string/phone_number"
+             android:textColor="@color/heading_text"
+             android:textSize="@dimen/_14ssp"
+             android:textStyle="bold" />-->
+
+
+        <EditText
+            android:id="@+id/etMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_14sdp"
+            android:background="@drawable/border_box"
+            android:drawableLeft="@drawable/baseline_call_20"
+            android:drawablePadding="@dimen/_12sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="@string/phone_number"
+            android:inputType="number"
+            android:maxLength="10"
+
+            android:padding="@dimen/_14sdp" />
+
+        <!-- Forgot Password Button -->
+        <!--  <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+              <TextView
+                  android:id="@+id/tvforgot_pass"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginLeft="25dp"
+                  android:layout_marginTop="0dp"
+                  android:layout_marginRight="25dp"
+                  android:text="@string/forgot_password"
+                  android:textSize="18dp"
+                  android:textColor="@color/blue1"/>
+          </RelativeLayout>-->
+
+        <!-- Terms & Conditions Checkbox -->
+        <LinearLayout
+            android:id="@+id/llTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cbTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/orange" />
+
+            <!--  <TextView
+                  android:id="@+id/tvTermsCondition"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="8dp"
+                  android:text="@string/term_cond"
+                  android:textColor="#6B7280"
+                  android:fontFamily="@font/montserrat_medium"
+                  android:textSize="@dimen/_12ssp"/>-->
+            <TextView
+                android:id="@+id/tvTermsCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:autoLink="web"
+                android:clickable="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/term_cond"
+                android:textColor="#1E88E5"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/bt_getOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:background="@drawable/bt_round_shape"
+            android:text="@string/get_otp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />
+        <!--   </LinearLayout>-->
+
+        <!-- Space to push other content to the center -->
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/_20sdp"
+                android:gravity="center|bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Don't have an account?"
+                    android:textColor="@color/sub_text"
+                    android:textSize="@dimen/_14ssp" />
+
+                <TextView
+                    android:id="@+id/tvSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Sign Up"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_14ssp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

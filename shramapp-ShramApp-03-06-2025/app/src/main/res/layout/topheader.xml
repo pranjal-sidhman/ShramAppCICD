@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/ic_menu_lines"
+            android:layout_marginStart="@dimen/_12sdp"
+            app:layout_constraintTop_toTopOf="@id/header"
+            app:layout_constraintStart_toStartOf="@id/header"
+            app:layout_constraintBottom_toBottomOf="@id/header"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layout_constraintTop_toTopOf="@id/ivMenu"
+            app:layout_constraintStart_toEndOf="@id/ivMenu"
+            app:layout_constraintBottom_toBottomOf="@id/ivMenu"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/baseline_notifications_24"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintTop_toTopOf="@id/header"
+            app:layout_constraintEnd_toEndOf="@id/header"
+            app:layout_constraintBottom_toBottomOf="@id/header"/>
+
+       <!-- <LinearLayout
+            android:id="@+id/llProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_profile_boarder"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="@id/ivBell"
+            app:layout_constraintEnd_toStartOf="@id/ivBell"
+            app:layout_constraintBottom_toBottomOf="@id/ivBell">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_profile"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="@id/header"
+                app:layout_constraintEnd_toEndOf="@id/header"
+                app:layout_constraintBottom_toBottomOf="@id/header"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_profile"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="@id/ivMenu"
+                app:layout_constraintStart_toEndOf="@id/ivMenu"
+                app:layout_constraintBottom_toBottomOf="@id/ivMenu"/>
+
+        </LinearLayout>
+-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

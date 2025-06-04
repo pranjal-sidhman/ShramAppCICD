@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="@string/menu_home"
+            android:textAppearance="@style/NavMenuTextAppearance"/>
+
+
+        <item
+            android:id="@+id/nav_post"
+            android:icon="@drawable/baseline_post_add_24"
+            android:title="@string/post"
+            android:textAppearance="@style/NavMenuTextAppearance"/>
+        <item
+            android:id="@+id/nav_network"
+            android:icon="@drawable/network"
+            android:title="@string/network"
+            android:textAppearance="@style/NavMenuTextAppearance"/>
+        <item
+            android:id="@+id/nav_worklist"
+            android:icon="@drawable/baseline_work_24"
+            android:title="@string/work_list"
+            android:textAppearance="@style/NavMenuTextAppearance"/>
+        <item
+            android:id="@+id/nav_language"
+            android:icon="@drawable/ic_world"
+            android:title="@string/change_lang"
+            android:textAppearance="@style/NavMenuTextAppearance"/>
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/baseline_person_24_1"
+            android:title="@string/profile"
+            android:textAppearance="@style/NavMenuTextAppearance"/>
+
+        <item
+            android:id="@+id/nav_privacy_policy"
+            android:icon="@drawable/privacy_policy"
+            android:title="@string/privacy_policy"
+            android:textAppearance="@style/NavMenuTextAppearance"/>
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/baseline_logout_24"
+            android:title="@string/logout"
+            android:textAppearance="@style/NavMenuTextAppearance"/>
+        <item
+            android:id="@+id/nav_logIn"
+            android:icon="@drawable/baseline_logout_24"
+            android:title="@string/login"
+            android:textAppearance="@style/NavMenuTextAppearance"/>
+    </group>
+</menu>

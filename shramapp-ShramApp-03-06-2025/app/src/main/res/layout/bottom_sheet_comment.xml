@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <!-- Nested Constraint Layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_round_bg_orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- Main Linear Layout -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llmain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <!-- Top Indicator -->
+            <View
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_3sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8sdp"
+                android:background="#C8C8C8" />
+
+            <!-- Title Text -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="@string/comments"
+                android:textColor="@color/heading_text"
+                android:textSize="@dimen/_14ssp" />
+
+            <!-- RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewComment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <!-- Chat Input Container -->
+            <RelativeLayout
+                android:id="@+id/layout_gchat_chatbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_10sdp">
+
+                <!-- Profile Picture -->
+                <LinearLayout
+                    android:id="@+id/ll_Profile"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/worker"
+                        app:shapeAppearanceOverlay="@style/CircleImageView"  />
+                </LinearLayout>
+
+                <!-- Chat Input Field -->
+                <LinearLayout
+                    android:id="@+id/commentBoxContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_toEndOf="@id/ll_Profile"
+                    android:background="@drawable/border_box"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.emoji2.widget.EmojiEditText
+                        android:id="@+id/et_post_message"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/write_comment"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:maxLines="5"
+                        android:minHeight="40dp"
+                        android:padding="5dp"
+                        android:textSize="@dimen/_14ssp"
+                        android:imeOptions="actionDone"/>
+
+                  <!--  <EditText
+                        android:id="@+id/et_post_message"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/write_comment"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:maxLines="5"
+                        android:minHeight="40dp"
+                        android:padding="5dp"
+                        android:textSize="@dimen/_14ssp"
+                        android:imeOptions="actionDone"/>-->
+
+                    <ImageView
+                    android:id="@+id/btnCommentSend"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/send"
+                    android:background="@drawable/bt_round_shape"
+                    app:tint="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/btnReply"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:src="@drawable/send"
+                        android:background="@drawable/bt_round_shape"
+                        app:tint="@color/white"
+                        android:visibility="gone"/>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- Send Message Button -->
+           <!-- <LinearLayout
+                android:id="@+id/msgsend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_gravity="end"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnCommentSend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_box"
+                    android:gravity="center"
+                    android:text="Comment"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/colorPrimary" />
+
+                <Button
+                    android:id="@+id/btnReply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_box"
+                    android:gravity="center"
+                    android:text="Reply"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+            </LinearLayout>-->
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

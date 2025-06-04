@@ -1,0 +1,135 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+   <!-- <style name="Theme.ShramApplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        &lt;!&ndash; Primary brand color. &ndash;&gt;
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        &lt;!&ndash; Secondary brand color. &ndash;&gt;
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+        &lt;!&ndash; Status bar color. &ndash;&gt;
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+    </style>
+
+    <style name="Theme.ShramApplication.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ShramApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="Theme.ShramApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    &lt;!&ndash; Define custom TextAppearance for navigation menu &ndash;&gt;
+    <style name="NavigationMenuTextAppearance" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/montserrat_bold</item> &lt;!&ndash; Replace with your custom font &ndash;&gt;
+        <item name="android:textSize">@dimen/_16ssp</item> &lt;!&ndash; Set your desired text size &ndash;&gt;
+        <item name="android:textColor">@android:color/black</item> &lt;!&ndash; Set text color &ndash;&gt;
+    </style>
+-->
+
+    <!-- Light theme -->
+    <style name="Theme.ShramKart" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary branding color -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- Primary variant (darker shade) -->
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <!-- Text/icons color on the primary color -->
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+
+        <!-- Navigation and status bar -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+       <!-- <item name="android:statusBarColor">@android:color/transparent</item>-->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+    </style>
+
+    <style name="Theme.ShramKart.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <style name="UCropActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+
+    <style name="Theme.ShramApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ShramApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ShramApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Set primary color for light theme -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+
+        <!-- Customize navigation bar and status bar colors -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+
+        <!-- Customize the toolbar color -->
+        <item name="colorSurface">@color/colorPrimary</item> <!-- For surface-like elements, such as Toolbar -->
+
+    </style>
+
+    <!-- Custom Text Appearance for Navigation Menu Items -->
+    <style name="NavMenuTextAppearance" parent="TextAppearance.AppCompat.Body1">
+        <item name="fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textColor">@color/heading_text</item> <!-- Optional: Set text color -->
+        <item name="android:textSize">@dimen/_14ssp</item> <!-- Optional: Set text size -->
+    </style>
+
+
+    <style name="NavigationMenuTextAppearance" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+
+    </style>
+
+    <style name="TransparentProgressDialog" parent="@android:Theme.Dialog" tools:ignore="ResourceCycle">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+
+
+        <!--<style name="TextView_normal"></style>-->
+
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+    <style name="CircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+</resources>

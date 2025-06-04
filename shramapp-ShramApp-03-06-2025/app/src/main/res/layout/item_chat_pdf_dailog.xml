@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/card_round_bg"
+    android:fitsSystemWindows="true">
+
+
+    <!-- Main Linear Layout -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+       <!-- <ImageView
+            android:id="@+id/ivPdf"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_250sdp"
+            android:background="@drawable/rounded_image"
+            android:src="@drawable/pdf_img"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_gravity="center"/>-->
+        <!--<com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/_8sdp"
+            tools:ignore="MissingClass" />-->
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llText"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_250sdp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_20sdp">
+
+
+            <ImageView
+                android:id="@+id/ivPdf"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/pdf_img" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tvFileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/heading_text"
+                    android:textSize="@dimen/_11ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:padding="@dimen/_5sdp"
+                    android:text=".png,.jpg formate up to 2 mb"
+                    android:textColor="@color/sub_text"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:fitsSystemWindows="true">
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSend"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:src="@drawable/send"
+            android:background="@drawable/bt_round_shape"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etMessage"
+            app:tint="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCamera"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/background_chat_input"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/baseline_photo_camera_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etMessage"
+            app:tint="@color/white"
+            android:visibility="gone"/>
+
+       <!-- <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:background="@null"
+            android:hint="@string/type_a_message"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/heading_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivSend"
+            app:layout_constraintStart_toEndOf="@+id/ivCamera" />-->
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:background="@drawable/border_box"
+            android:hint="@string/type_a_message"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text|textCapSentences"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/heading_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivSend"
+            app:layout_constraintStart_toEndOf="@+id/ivCamera" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splashLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:theme="@style/Theme.ShramKart.NoActionBar"
+    tools:context=".ui.splash.SplashActivity">
+
+    <ImageView
+        android:id="@+id/fullLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shram_logo"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="काम सही मिलेगा यही !"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_18ssp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        app:layout_constraintTop_toBottomOf="@id/fullLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- Cap Logo (attached to top of fullLogo, centered horizontally) -->
+  <!--  <ImageView
+        android:id="@+id/capLogo"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"
+        android:layout_marginEnd="130dp"
+        app:layout_constraintBottom_toTopOf="@id/fullLogo"
+        app:layout_constraintStart_toStartOf="@id/fullLogo"
+        app:layout_constraintEnd_toEndOf="@id/fullLogo" />
+-->
+    <ImageView
+        android:id="@+id/capLogo"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"
+        android:layout_marginEnd="130dp"
+        app:layout_constraintBottom_toTopOf="@id/fullLogo"
+        app:layout_constraintStart_toStartOf="@id/fullLogo"
+        app:layout_constraintEnd_toEndOf="@id/fullLogo"
+        android:translationY="15dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.splash.SplashActivity">
+
+
+    &lt;!&ndash; Background Image with Overlay &ndash;&gt;
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@color/white" />
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/logoContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="logo"
+            android:src="@drawable/logo" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/logoContainer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/_16sdp">
+
+            <ImageView
+                android:id="@+id/logoText"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:src="@drawable/shram_name"
+                android:contentDescription="logo" />
+
+            <ImageView
+                android:id="@+id/logowithOutCap"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:src="@drawable/shram_logo"
+                android:contentDescription="logo"
+                android:visibility="gone"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="काम सही मिलेगा यही !"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_18ssp"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_semi_bold"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+</RelativeLayout>-->
